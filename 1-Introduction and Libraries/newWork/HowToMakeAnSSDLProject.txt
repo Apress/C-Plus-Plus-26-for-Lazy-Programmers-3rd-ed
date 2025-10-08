@@ -1,0 +1,19 @@
+How do you create a project that works with Lazy Programmers source code?
+
+Unix:
+
+Copy the basicSSDLProject folder in the newWork subfolder, and rename it appropriately.  
+To make, type make.
+To run, type ./runx
+
+Microsoft Visual Studio:
+
+Either
+
+Copy the basicSSDLProject in the newWork subfolder, and rename it appropriately. Be sure to
+keep it in this newWork folder so the relative paths to the include and library directories still work.
+
+or
+
+See Appendix A of _C++26 for Lazy Programmers_ to make  your own.
+

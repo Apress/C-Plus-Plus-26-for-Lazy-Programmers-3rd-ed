@@ -1,0 +1,32 @@
+/*Simple SDL, a wrapper library for SDL.
+  
+  Copyright (C) 2025 Will Briggs.
+
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution. */
+
+//This is SSDL_Color.h, which provides SSDL_Color:  just like SDL_Color, except that it has constructors
+
+#include "SSDL_color.h"
+#include "SSDL_exception.h"
+
+const SSDL_Color BLACK(0, 0, 0), WHITE (255, 255, 255), RED (255, 0, 0), GREEN (0, 255, 0), BLUE (0, 0, 255);
+
+void SSDL_Color::print(std::ostream& out) const
+{
+    out << '(' << static_cast<int> (r) << ' ' << static_cast<int> (g) 
+        << ' ' << static_cast<int> (b) << ' ' << static_cast<int> (a) << ')';
+}

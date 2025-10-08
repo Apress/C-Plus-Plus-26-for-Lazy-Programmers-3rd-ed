@@ -1,0 +1,1 @@
+At present, Debian distributions can't compile this code -- it's too modern for Debian's current standard g++ distributions. Will change this notice when they upgrade.

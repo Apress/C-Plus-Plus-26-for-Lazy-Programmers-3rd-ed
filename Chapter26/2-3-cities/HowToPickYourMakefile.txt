@@ -1,0 +1,9 @@
+To make the program correctly,
+
+If you're using Fedora, Manjaro, or MSys2, at present, enter
+
+cp Makefile.26 Makefile
+
+For other distributions of Unix,
+
+cp Makefile.23 Makefile

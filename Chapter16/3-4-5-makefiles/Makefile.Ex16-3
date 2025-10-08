@@ -1,0 +1,15 @@
+#This is a basic Makefile, producing one program from 2 source files
+#  -- from _C++26 for Lazy Programmers_, but I claim no copyright
+
+myprogram:	myclass.o main.o
+		g++ -std=c++2b -g -o myprogram myclass.o main.o
+
+main.o:	main.cpp myclass.h
+		g++ -std=c++2b -g -c main.cpp
+
+myclass.o:	myclass.cpp myclass.h
+		g++ -std=c++2b -g -c myclass.cpp
+
+clean:
+		rm -f myprogram
+		rm -f *.o
