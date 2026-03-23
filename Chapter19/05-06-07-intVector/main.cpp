@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cassert>
+#include <stdexcept>
 #include "vector.h"
 
 using namespace std;
@@ -23,7 +24,7 @@ int main()
 
     try
     {
-        for (unsigned int i = 0; i < V.size(); ++i) cout << V[i] << ' ';
+        for (unsigned int i = 0; i < V.size(); ++i) cout << V.at(i) << ' ';
         cout << '\n';
     }
     catch (const std::out_of_range& e)
