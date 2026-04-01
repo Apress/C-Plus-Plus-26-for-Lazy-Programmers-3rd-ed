@@ -53,14 +53,13 @@ ostream& operator<<(ostream& out, Suit suit) // prints a Suit
 //   to convert a digit to an int
 inline int char2Int(char ch) { return ch - '0'; }
 
-// These comments lined up in Word, honest.
 istream& operator>>(istream& in, Rank& r)
 {
     using enum Rank;
 
     char answer; in>> answer;
 
-    switch (toupper(answer))              // Valid ranks include
+    switch (toupper(answer))               // Valid ranks include
     {
     case 'A': r = ACE;   break;            // 'A','J','Q','K'...
     case 'J': r = JACK;  break;
@@ -77,7 +76,7 @@ istream& operator>>(istream& in, Rank& r)
         if ('2' <= answer && answer <= '9')// '2'...'9' are valid
             r = static_cast<Rank>(char2Int(answer));  //  ranks too
         else
-            throw BadRankException();     // all others are invalid
+            throw BadRankException();      // all others are invalid
     }
 
     return in;
