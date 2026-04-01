@@ -15,21 +15,21 @@ int main()
 
     // Test ctors are doing things right... 
     //   and ==, !=, and access functions
-    const Card ACE_OF_SPACES(ACE, SPADES);
-    const Card COPY_OF_ACE_OF_SPACES(ACE_OF_SPACES);
+    const Card ACE_OF_SPADES(ACE, SPADES);
+    const Card COPY_OF_ACE_OF_SPADES(ACE_OF_SPADES);
 
-    assert(ACE_OF_SPACES ==COPY_OF_ACE_OF_SPACES);
-    assert(COPY_OF_ACE_OF_SPACES.rank() == ACE && 
-            COPY_OF_ACE_OF_SPACES.suit() == SPADES);
+    assert(ACE_OF_SPADES ==COPY_OF_ACE_OF_SPADES);
+    assert(COPY_OF_ACE_OF_SPADES.rank() == ACE && 
+            COPY_OF_ACE_OF_SPADES.suit() == SPADES);
     assert(toColor(HEARTS) == RED);
-    assert(COPY_OF_ACE_OF_SPACES.color() == BLACK);
+    assert(COPY_OF_ACE_OF_SPADES.color() == BLACK);
 
     // Now without things being const
     Card someCard;
     assert(someCard == Card(Rank(0), Suit(0)));
-    assert(someCard != ACE_OF_SPACES);
-    someCard         = ACE_OF_SPACES;
-    assert(someCard == ACE_OF_SPACES);
+    assert(someCard != ACE_OF_SPADES);
+    someCard         = ACE_OF_SPADES;
+    assert(someCard == ACE_OF_SPADES);
     
     cout << "Enter 3 cards, using S for spades, H for hearts, etc.\n"
          << "E.g. KS for king of spades, or 10h for the 10 of hearts.\n"
